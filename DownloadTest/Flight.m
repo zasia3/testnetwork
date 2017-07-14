@@ -10,4 +10,18 @@
 
 @implementation Flight
 
+- (id)initWith:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        self.airline = dictionary[@"airline"];
+        self.arrivalAirport = dictionary[@"arrival_airport"];
+        self.arrivalDate = dictionary[@"arrival_date"];
+        self.departureAirport = dictionary[@"departure_airport"];
+        self.departureDate = dictionary[@"departure_date"];
+        self.price = dictionary[@"price"];
+    }
+    
+    return self;
+}
+
 @end

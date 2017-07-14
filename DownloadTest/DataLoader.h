@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^CompletionBlock)(NSArray *);
+
 @interface DataLoader : NSObject
+
+-(void) getFlightsWithCompletion:(CompletionBlock)completion;
 
 @end
